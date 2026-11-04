@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankit Pudasaini | Tech Personal Website</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0ea5e9;
+            --border-color: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 40px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: #0f172a;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.2s, transform 0.2s;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Section Styling */
+        section {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        /* Skills List */
+        .skills-list {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .skills-list li {
+            background: rgba(56, 189, 248, 0.05);
+            border: 1px solid var(--border-color);
+            padding: 12px 18px;
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skills-list li::before {
+            content: "✦";
+            color: var(--accent);
+        }
+
+        /* Contact Form */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        /* Connect Grid */
+        .connect-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .connect-card {
+            background-color: var(--bg-color);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .connect-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--text-primary);
+        }
+
+        .connect-card p {
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+
+        .connect-card a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .connect-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="hero">
+            <h1>Hi, I'm Ankit Pudasaini</h1>
+            <a href="#contact" class="btn">WORK WITH ME</a>
+        </header>
+
+        <section>
+            <h2>About Ankit Pudasaini</h2>
+            <p>I am a passionate web developer dedicated to building clean, responsive, and user-friendly websites. My learning journey began with mastering core building blocks like <strong>HTML and CSS</strong>, growing into modern web design principles.</p>
+        </section>
+
+        <section>
+            <h2>Credentials & Education</h2>
+            <h3>Grade 11 in Computer Science</h3>
+            <p>National School of Sciences<br>2026 - 2027</p>
+        </section>
+
+        <section>
+            <h2>Skills & Core Focus</h2>
+            <ul class="skills-list">
+                <li>HTML & CSS</li>
+                <li>Basic C Programming</li>
+                <li>Modern Web Design</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Let's Build Together</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" placeholder="Tell me about your project or inquiry..."></textarea>
+                </div>
+                <button type="submit" class="btn">SEND MESSAGE</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Connect Directly</h2>
+            <div class="connect-grid">
+                <div class="connect-card">
+                    <h3>Instagram</h3>
+                    <p>@ankit_siddhartha</p>
+                    <a href="https://instagram.com" target="_blank">Follow &rarr;</a>
+                </div>
+                <div class="connect-card">
+                    <h3>LinkedIn</h3>
+                    <p>Ankit Pudasaini</p>
+                    <a href="https://linkedin.com" target="_blank">Connect &rarr;</a>
+                </div>
+                <div class="connect-card">
+                    <h3>Facebook</h3>
+                    <p>Nepali Ankit Pudasaini</p>
+                    <a href="https://facebook.com" target="_blank">Profile &rarr;</a>
+                </div>
+                <div class="connect-card">
+                    <h3>WhatsApp</h3>
+                    <p>+977 9743750235</p>
+                    <a href="https://whatsapp.com" target="_blank">Chat &rarr;</a>
+                </div>
+                <div class="connect-card">
+                    <h3>Email Me</h3>
+                    <p>ankitpudasaini01@gmail.com</p>
+                    <a href="mailto:ankitpudasaini01@gmail.com">Send Mail &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Ankit Pudasaini. All Rights Reserved.</p>
+            <p>
+                <a href="#">Terms & Support</a> | <a href="#">Privacy Policy</a>
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>
