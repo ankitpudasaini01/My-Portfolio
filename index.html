@@ -858,6 +858,36 @@
     <footer>
         <p>&copy; 2026 Ankit Pudasaini. All rights reserved.</p>
     </footer>
+<script>
+  const contactForm = document.querySelector('.contact-card form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const name = contactForm.querySelector('input[type="text"]').value;
+      const email = contactForm.querySelector('input[type="email"]').value;
+      const message = contactForm.querySelector('textarea').value;
 
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ name, email, message })
+        });
+
+        const result = await response.json();
+        console.log(result);
+        alert('Message sent successfully!');
+        contactForm.reset();
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Failed to send message.');
+      }
+    });
+  }
+</script>
+    
 </body>
 </html>
